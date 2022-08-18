@@ -20,3 +20,9 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: FortifySCA@7
+  inputs:
+    licenseFile: 'C:\FortifyAgent\vsts-agent-win-x64-2.206.1 (1)\fortify.license'
+    applicationType: 'java'
+    fortifyBuildId: 'WebGoat'
+    fortifyScanType: 'LocalScan'
