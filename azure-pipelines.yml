@@ -20,9 +20,8 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- task: FortifySCA@7
+- task: InstallFortifySCA@7
   inputs:
-    licenseFile: 'C:\FortifyAgent\vsts-agent-win-x64-2.206.1 (1)\fortify.license'
-    applicationType: 'java'
-    fortifyBuildId: 'WebGoat'
-    fortifyScanType: 'LocalScan'
+    InstallerPath: 'C:\Program Files\Fortify\FortifyAgent\vsts-agent-win-x64-2.206.1 (1)\Fortify_SCA_and_Apps_22.1.0\bin\sourceanalyzer.exe'
+    LicenseFile: '"C:\Program Files\Fortify\FortifyAgent\vsts-agent-win-x64-2.206.1 (1)\fortify.license"'
+    RunFortifyRulepackUpdate: true
