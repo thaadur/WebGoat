@@ -8,15 +8,13 @@ workflows:
 jobs:
   test:
     docker:
-      - image: circleci/openjdk:17-ea-33-buster-node-browsers-legacy
+      - image: cimg/openjdk:20.0.1
     steps:
       - checkout
       - run: 
           name: maven build
           command: |
           sudo apt-get update && sudo apt-get install openjdk-17-jdk
-          sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
-          sudo update-alternatives --set javac /usr/lib/jvm/java-17-openjdk-amd64/bin/javac
           java -version
           
         
