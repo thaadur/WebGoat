@@ -14,7 +14,6 @@ jobs:
       - run: 
           name: maven build
           command: 
-          sudo apt-get update && sudo apt-get install openjdk-17-jdk
           java -version
           
         
