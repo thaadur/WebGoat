@@ -1,7 +1,8 @@
 version: 2.1
-
+orbs:
+  maven: circleci/maven@1.4.1
 workflows:
- test-deploy:
+ maven Project:
    jobs:
      - test
 jobs:
@@ -10,4 +11,12 @@ jobs:
       - image: circleci/openjdk:17-ea-33-buster-node-browsers-legacy
     steps:
       - checkout
-      - run: java --version
+      - run: 
+          name: maven build
+          command: |
+          sudo apt-get update && sudo apt-get install openjdk-17-jdk
+          sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+          sudo update-alternatives --set javac /usr/lib/jvm/java-17-openjdk-amd64/bin/javac
+          java -version
+          
+        
