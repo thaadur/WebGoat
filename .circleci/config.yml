@@ -11,7 +11,9 @@ jobs:
       - image: cimg/openjdk:17.0
     steps:
       - checkout
-      - run: java -version
+      - run:
+      -command: |
+       java -version
     
           
           
