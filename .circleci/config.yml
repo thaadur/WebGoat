@@ -7,7 +7,7 @@ workflows:
 jobs:
   test:
     docker:
-      - image: cimg/node:20.3.1
+      - image: cimg/openjdk:20.0.1
     steps:
       - checkout
-      - run: node --version
+      - run: java --version
