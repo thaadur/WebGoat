@@ -12,8 +12,9 @@ jobs:
     steps:
       - checkout
       - run:
-      command: |
-       java -version
+          name: Install maven
+          command: |
+          java -verion
     
           
           
