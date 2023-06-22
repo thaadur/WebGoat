@@ -12,9 +12,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install maven
-          command: |
-          java --verion
+          name: Build with Maven
+          command: java --verion
     
           
           
