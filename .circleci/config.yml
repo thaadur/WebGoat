@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: 
           name: maven build
-          command: 
+          command: |
           java -version
           
         
