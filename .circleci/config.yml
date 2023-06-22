@@ -11,9 +11,8 @@ jobs:
       - image: cimg/openjdk:20.0.1
     steps:
       - checkout
-      - run: 
-          name: maven build
-          command: |
-          java -version
+      - run: java -version
+    
+          
           
         
