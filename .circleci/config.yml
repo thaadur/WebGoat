@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - run:
-      -command: |
+      command: |
        java -version
     
           
