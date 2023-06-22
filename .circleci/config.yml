@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: 
           name: maven build
-          command: |
+          command: 
           sudo apt-get update && sudo apt-get install openjdk-17-jdk
           java -version
           
