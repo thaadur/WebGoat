@@ -3,10 +3,10 @@ name: SonarQube Analysis
 on:
   push:
     branches:
-      - main  # Run analysis on push to the 'main' branch
+      - master  # Run analysis on push to the 'main' branch
   pull_request:
     branches:
-      - main  # Run analysis on pull requests targeting the 'main' branch
+      - master  # Run analysis on pull requests targeting the 'main' branch
  
 jobs:
   sonarQube:
